@@ -78,16 +78,20 @@ const init = (b, h, c) => {
 
 // 收到了來自其他群組的訊息
 const receive = (msg) => new Promise((resolve, reject) => {
+    let target_options = {};
+    if (msg?.extra?._avatarurl && msg?.extra?._avatarurl !== "_avatarurl") {
+        target_options._avatarurl = msg.extra._avatarurl;
+    }
     if (msg.isNotice) {
         if (msg.extra.clients >= 3) {
-            discordHandler.say(msg.to, `< ${msg.extra.clientName.fullname}: ${msg.text} >`);
+            discordHandler.say(msg.to, `< ${msg.extra.clientName.fullname}: ${msg.text} >`, target_options);
         } else {
-            discordHandler.say(msg.to, `< ${msg.text} >`);
+            discordHandler.say(msg.to, `< ${msg.text} >`, target_options);
         }
     } else {
         if (msg.extra.isAction) {
             // 一定是 IRC
-            discordHandler.say(msg.to, `* ${msg.nick} ${msg.text}`);
+            discordHandler.say(msg.to, `* ${msg.nick} ${msg.text}`, target_options);
             resolve();
         } else {
             let special = '';
@@ -117,7 +121,7 @@ const receive = (msg) => new Promise((resolve, reject) => {
 
             // 檔案
             const attachFileUrls = () => (msg.extra.uploads || []).map(u => ` ${u.url}`).join('');
-            discordHandler.say(msg.to, prefix + msg.text + attachFileUrls());
+            discordHandler.say(msg.to, prefix + msg.text + attachFileUrls(), target_options);
         }
     }
     resolve();
