@@ -3,6 +3,14 @@
 const path = require('path');
 const BridgeMsg = require('../BridgeMsg.js');
 
+const truncate = (str, maxLen = 10) => {
+    str = str.replace(/\n/gu, '');
+    if (str.length > maxLen) {
+        str = str.substring(0, maxLen - 3) + '...';
+    }
+    return str;
+};
+
 const htmlEscape = (str) => {
     return str.replace(/&/gu, '&amp;').replace(/</gu, '&lt;').replace(/>/gu, '&gt;');
 };
@@ -169,8 +177,28 @@ const receive = (msg) => new Promise((resolve, reject) => {
                 }
             }
         }
-        output = `${prefix}${htmlEscape(msg.text)}`;
 
+        try{
+        let msg_text = msg.text;
+        let special = "";
+        if (msg.extra.reply) {
+            const reply = msg.extra.reply;
+            special = `Re ${reply.nick} `;
+
+            if (reply.isText) {
+                special += `「${truncate(reply.message)}」`;
+            } else {
+                special += reply.message;
+            }
+
+            special += ': ';
+        } else if (msg.extra.forward) {
+            special = `Fwd ${msg.extra.forward.nick}: `;
+        }
+        msg_text = special + htmlEscape(msg_text);
+
+        output = `${prefix}${msg_text}`;
+        }catch(err_msg){console.log(err_msg);throw err_msg;}
         // TODO 圖片在文字之前發出
         tgHandler.sayWithHTML(msg.to, output);
 
