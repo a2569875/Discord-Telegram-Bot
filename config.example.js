@@ -6,7 +6,7 @@
 
 module.exports = {
     "IRC": {
-        "disabled": false,                  // 設為 true 之後會禁止 IRC 機器人
+        "disabled": true,                  // 設為 true 之後會禁止 IRC 機器人
         "bot": {
             "server": "irc.freenode.net",
             "nick": "",                     // IRC 暱稱
@@ -49,7 +49,7 @@ module.exports = {
       注意：QQ 機器人需要與酷 Q 和 https://github.com/mrhso/cqsocketapi 配合使用！
      */
     "QQ": {
-        "disabled": false,                  // 設定為 true 後會禁止 QQ 機器人
+        "disabled": true,                  // 設定為 true 後會禁止 QQ 機器人
         "qq": "10000",                      // Bot 的 QQ 號碼
         "options": {
             "selfCensorship": true,         // 敏感詞列表，位於 badwords.js
@@ -91,6 +91,7 @@ module.exports = {
             [
                 'irc/#test',
                 'telegram/-12345678',       // Telegram 群組號碼：可以先把 bot 拉到群組中，然後透過 /thisgroupid 來取得 id
+                'Discord/1234567898765432123',
                 'qq/12345678'
                 // 'QQ/87654321'            // 如果有這種需求，亦可以連接
             ]
