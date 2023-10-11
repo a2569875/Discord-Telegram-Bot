@@ -1,7 +1,7 @@
 {
-    "name": "lilywhitebot",
+    "name": "discord_telegram_bot",
     "version": "1.3.1",
-    "description": "互聯機器人（目前支援 QQ、Telegram、IRC）",
+    "description": "互聯機器人（目前支援 QQ、Telegram、IRC、Discord）",
     "dependencies": {
         "cwebp": "~2.0.5",
         "irc-upd": "~0.10.0",
