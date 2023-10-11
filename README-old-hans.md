@@ -5,7 +5,7 @@ LilyWhiteBot
 
 [傳統漢字版](README-old.md)
 
-[简化字版（内地用语）](README-hans-cn.md)
+[简化字版（内地用语）](README-old-hans-cn.md)
 
 在多个群组间传话的机器人。原名为「qq-tg-irc」。
 
