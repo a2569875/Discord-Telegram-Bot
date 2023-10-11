@@ -45,6 +45,13 @@ goto a
 |   ----    |  ----   |
 | ![](readme/fig1.png) | ![](readme/fig2.png) |
 
+### 設定 其他平台機器人
+請[參考舊版ReadMe](README-old.md)
+- [設定QQ機器人](README-old.md#設定-qq-機器人)
+- [設定IRC機器人](README-old.md#設定-irc-機器人)
+- 設定WeChat機器人
+   * 在 config.js 裡加入 `"WeChat": { ... }`，並按照[QQ設定](README-old.md#設定-qq-機器人)
+
 ## 提示
 1. 如果把 config.js 中的 `paeeye` 設為 `//`，那麼在訊息之前加入 `//`（例如「//隱藏」）可防止被其他群組看見。
 2. 如果允許 IRC 接受命令（plugins 中有「irccommand」），那麼可在 Telegram 和 QQ 中使用 `/command 命令`。該命令並非 IRC 命令，而是為配合 IRC 頻道中的機器人而設。
