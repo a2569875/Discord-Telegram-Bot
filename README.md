@@ -4,7 +4,7 @@
 
 這個專案修改自[LilyWhiteBot](https://github.com/mrhso/LilyWhiteBot/tree/master)，原名為「[qq-tg-irc](https://github.com/esons/qq-tg-irc)」。
 
-[原版的Readme](README.md)
+[原版的Readme](README-old.md)
 
 本專案開發是基於Fork，基於上游專案的定義，其還支援Discord、Telegram、微信\(WeChat\)、IRC、QQ等通訊軟體間的訊息同步功能。但本專案僅以Discord和Telegram間的訊息同步開發維護。
 
