@@ -3,9 +3,9 @@ LilyWhiteBot
 
 [Discord-Telegram-Bot](README.md)
 
-[简化字版](README-old-hans.md)
+[简化字版](README-old.zh-hans.md)
 
-[简化字版（内地用语）](README-old-hans-cn.md)
+[简化字版（内地用语）](README-old.zh-hans-cn.md)
 
 在多個群組間傳話的機器人。原名為「qq-tg-irc」。
 

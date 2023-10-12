@@ -8,6 +8,10 @@ This project is a modification of [LilyWhiteBot](https://github.com/mrhso/LilyWh
 
 The development of this project is based on a fork and, according to the definition of the upstream project, it supports message synchronization between various communication software, including Discord, Telegram, WeChat (WeChat), IRC, QQ, and more. However, this project is developed and maintained exclusively for message synchronization between Discord and Telegram.
 
+### Language
+* [繁體中文](README.zh-hant.md)
+* [English](README.md)
+
 ## How to Install
 
 ### Mandatory Steps

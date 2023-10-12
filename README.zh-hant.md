@@ -8,6 +8,10 @@
 
 本專案開發是基於Fork，基於上游專案的定義，其還支援Discord、Telegram、微信\(WeChat\)、IRC、QQ等通訊軟體間的訊息同步功能。但本專案僅以Discord和Telegram間的訊息同步開發維護。
 
+### Language
+* [繁體中文](README.zh-hant.md)
+* [English](README.md)
+
 ## 如何安裝
 
 ### 必需步驟
