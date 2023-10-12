@@ -1,3 +1,5 @@
+[![node.js](https://img.shields.io/badge/node--js-%E2%89%A77.0-green)](https://nodejs.org/)
+[![License](https://img.shields.io/github/license/a2569875/Discord-Telegram-Bot)](https://github.com/a2569875/sd-webui-prompt-highlight/blob/main/LICENSE)
 # Discord-Telegram-Bot
 
 這個機器人的功能是在多個群組間傳話的機器人，包括但不限於Discord、Telegram等通訊軟體。啟發自[中文維基百科互連群](https://zh.wikipedia.org/wiki/Wikipedia:%E4%B8%AD%E6%96%87%E7%B6%AD%E5%9F%BA%E7%99%BE%E7%A7%91%E5%BF%97%E9%A1%98%E8%80%85%E4%BA%92%E8%81%AF%E4%BA%A4%E6%B5%81%E7%BE%A4)中的[zhmrtbot](User:Renamed_user_9811840658/zhmrtbot)。

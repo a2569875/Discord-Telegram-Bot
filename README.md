@@ -1,3 +1,5 @@
+[![node.js](https://img.shields.io/badge/node--js-%E2%89%A77.0-green)](https://nodejs.org/)
+[![License](https://img.shields.io/github/license/a2569875/Discord-Telegram-Bot)](https://github.com/a2569875/sd-webui-prompt-highlight/blob/main/LICENSE)
 # Discord-Telegram-Bot
 
 The functionality of this bot is to relay messages between multiple groups, including but not limited to Discord, Telegram, and other messaging software. Inspired by the [Chinese Wikipedia Interconnection Group](https://zh.wikipedia.org/wiki/Wikipedia:%E4%B8%AD%E6%96%87%E7%B6%AD%E5%9F%BA%E7%99%BE%E7%A7%91%E5%BF%97%E9%A1%98%E8%80%85%E4%BA%92%E8%81%AF%E4%BA%A4%E6%B5%81%E7%BE%A4) and [zhmrtbot](User:Renamed_user_9811840658/zhmrtbot).
