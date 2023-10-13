@@ -65,8 +65,7 @@ module.exports = {
         "disabled": false,                  // 設為 true 之後會禁止 Discord 機器人
         "bot": {
             "token": "",                    // Bot 的 Token
-            "Webhook_id": "",               // 要讓Telegram的Avatar能於Discord上顯示必須到Telegram對應頻道申請Webhook
-			"Webhook_token": "_L4l6AkrD-HRh5p_0MdC8fPfs-Nwin_MhBjFH49gsIe0g05gnzp9icFXY3uoZpVX-aXt" //Webhook 的 Token
+            "Webhook": true,                // 是否使用webhook
         },
         "options": {
             "nickStyle": "username",        // 可取「username」（使用者名稱）、「id」（ID）

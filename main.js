@@ -249,8 +249,6 @@ if (config.Discord && !config.Discord.disabled) {
 
     pluginManager.log('Starting DiscordBot...');
     const discordClient = new discord.Client();
-	const discordWebhook = new discord.WebhookClient(`${config.Discord.bot.Webhook_id}/${config.Discord.bot.Webhook_token}`);
-	discordWebhook.login_data = { id: config.Discord.bot.Webhook_id, token: config.Discord.bot.Webhook_token };
 	
     discordClient.on('ready', (message) => {
         pluginManager.log('DiscordBot is ready.');
@@ -266,10 +264,10 @@ if (config.Discord && !config.Discord.disabled) {
     let options2 = {
         nickStyle: options.nickStyle,
         useProxyURL: options.useProxyURL,
+        Webhook: config.Discord.bot.Webhook
     };
 
     const discordHandler = new DiscordMessageHandler(discordClient, options2);
-	discordHandler.setWebhook(discordWebhook);
     pluginManager.handlers.set('Discord', discordHandler);
     pluginManager.handlerClasses.set('Discord', {
         object: DiscordMessageHandler,
