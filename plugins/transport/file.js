@@ -376,18 +376,19 @@ const cacheFile = (getfile, fileid) => new Promise((resolve, reject) => {
             case 'vim-cn':
                 uploadToVimCN(file).then((url) => resolve(url), (e) => reject(e));
                 break;
-                 
+                
             case 'sm.ms':
                 uploadToSmms(file).then((url) => resolve(url), (e) => reject(e));
                 break;
-                 
+                
             case 'imgur':
                 uploadToImgur(file, servemedia.imgur || {}).then((url) => resolve(url), (e) => reject(e));
                 break;
+                
             case 'reupload':
                 reuploadImage(file, fileid).then((url) => resolve(url), (e) => reject(e));
                 break;
-                 
+                
             case 'self':
                 saveToCache(file, fileid).then((url) => resolve(url), (e) => reject(e));
                 break;
@@ -395,14 +396,14 @@ const cacheFile = (getfile, fileid) => new Promise((resolve, reject) => {
             case 'linx':
                 uploadToLinx(file).then((url) => resolve(url), (e) => reject(e));
                 break;
-                 
+                
             case 'uguu':
             case 'Uguu':
                 uploadToUguu(file).then((url) => resolve(url), (e) => reject(e));
                 break;
-                 
+                
             default:
-
+                break;
         }
     }).catch((e) => reject(e));
 });
