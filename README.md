@@ -62,7 +62,7 @@ To set up a Discord bot, follow these steps:
    | ----      | ----     |
    | ![](readme/fig1.png) | ![](readme/fig2.png) |
 
-### Setting up Bots for Other Platforms
+### Setting up Bots for Other chat software
 
 Please refer to the [old ReadMe](README-old.md) for instructions on setting up bots for other platforms, including:
 
