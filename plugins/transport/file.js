@@ -192,6 +192,45 @@ const uploadToSmms = (file) => new Promise((resolve, reject) => {
     }
 });
 
+const reuploadImage = (file, config) => new Promise((resolve, reject) => {
+    try {
+        let t;
+        let targetDir = servemedia.cachePath;
+        let targetName = fileid;
+
+        if (file.url && !path.extname(targetName)) {
+            targetName += path.extname(file.url);
+        }
+        targetName = preprocessFileName(targetName);
+
+        let targetPath = path.join(targetDir, targetName);
+        let w = fs.createWriteStream(targetPath).on('error', (e) => {
+            reject(e);
+        });
+
+        if (file.url) {
+            // 下載
+            preprocessFile(file.url, request.get(file.url)).on('end', () => {
+                resolve({
+                    file_path: servemedia.serveUrl + targetName,
+                    dtype: 'loacl_file'
+                });
+            }).pipe(w);
+        } else if (file.path) {
+            // 複製到 cachePath
+            fs.createReadStream(file.path).on('end', () => {
+                resolve({
+                    file_path: servemedia.serveUrl + targetName,
+                    dtype: 'loacl_file'
+                });
+            }).pipe(w);
+        } else {
+            reject('Invalid file');
+        }
+    } catch (e) {
+        reject(e);
+    }
+});
 /*
  * 上傳到 https://imgur.com
  */
@@ -345,7 +384,10 @@ const cacheFile = (getfile, fileid) => new Promise((resolve, reject) => {
             case 'imgur':
                 uploadToImgur(file, servemedia.imgur || {}).then((url) => resolve(url), (e) => reject(e));
                 break;
-				 
+            case 'reupload':
+                reuploadImage(file, fileid).then((url) => resolve(url), (e) => reject(e));
+                break;
+                 
             case 'self':
                 saveToCache(file, fileid).then((url) => resolve(url), (e) => reject(e));
                 break;
