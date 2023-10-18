@@ -51,7 +51,7 @@ goto a
 |   ----    |  ----   |
 | ![](readme/fig1.png) | ![](readme/fig2.png) |
 
-你可以設定Discord端以WebHook轉發，屆時，如果是從Telegram轉發的消息，會直接顯示頭像和名稱。設定方式為
+你可以設定Discord端以WebHook轉發，屆時，如果是從Telegram轉發的消息，會直接顯示頭像和名稱。設定方式為：
 1. 先準備你叫串聯之頻道的WebHook。對頻道點選\[編輯頻道\]，並選擇\[整合\]，在該頁找到WebHooks。如果還沒有WebHook，會出現\[建立Webhook\]按鈕，點擊它；如果已有WebHook或是被系統自動建立WebHook了，則其會顯示\[查看Webhook ❯\]，點選它，會出現WebHook清單，點選第一個WebHook (本程式只吃頻道的首個WebHook) 即可進入WebHook編輯畫面。在WebHook編輯畫面你可以給作為機器人的WebHook一個機器人的名字，之後儲存設定即可。如果你是從\[伺服器設定\]進入的，則在頁籤中找到\[應用程式\]頁籤類別裡面的\[整合\]頁籤，然後同上操作，最後會在編輯畫面右側讓你選擇頻道。
 2. 在`config.js`裡，`"Discord":`的設定中的`"bot":`裡將`"Webhook":`設為`true`即可。
 3. 請注意，如果每個頻道都想顯示來自其他群的頭像的話，你需要在每一個有互相連結/同步Message的頻道都需要加入一個新的WebHook。
