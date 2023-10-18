@@ -62,6 +62,14 @@ To set up a Discord bot, follow these steps:
    | ----      | ----     |
    | ![](readme/fig1.png) | ![](readme/fig2.png) |
 
+You can configure Discord to forward messages via WebHook, where messages forwarded from Telegram will directly display the avatar and name. The setup process is as follows:
+
+1. First, prepare a WebHook for the channel you want to connect. Click on the \[`channel`\], select \[`Edit Channel`\], and choose \[`Integrations`\] tab. On that page, find WebHooks. If you don't have a WebHook, you will see a \[`Create Webhook`\] button. Click it. If you already have a WebHook or it has been automatically created by the system, it will display \[`View Webhooks ❯`\]. Click it, and you will see a list of WebHooks. Click on the first WebHook (this program only uses the first WebHook of the channel) to enter the WebHook editing page. In the WebHook editing page, you can give your WebHook, serving as the bot, a name. Save the settings. If you entered through \[`Server Settings`\], then in the tabs, find the \[`APPS`\] group and choose the \[`Integrations`\] tab. Follow the same steps as mentioned above. In the end, you'll be given the option to choose the channel.
+
+2. In `config.js`, within the `"Discord":` settings under `"bot":`, set `"Webhook":` to `true`.
+
+3. Please note that every channel with interconnected/synchronized messages requires the addition of a new WebHook if you want each channel to display avatars from other groups.
+
 ### Setting up Bots for Other chat software
 
 Please refer to the [old ReadMe](README-old.md) for instructions on setting up bots for other platforms, including:
